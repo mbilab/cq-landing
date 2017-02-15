@@ -11,5 +11,7 @@ $(document).ready(function() {
   $('#getapp > img:nth-child(2)').click(function() {
     window.open('https://www.youtube.com/watch?v=4_mTpRvTuSU')
   })
-})
 
+  $('body').css('background-image','url('+require('./res/cq-res/home/background.png')+')')
+  $('body > div:first-child').css('background-image','url('+require('./res/cq-res/main/logo-vertical.png')+')')
+})

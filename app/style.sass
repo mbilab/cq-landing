@@ -1,20 +1,20 @@
 body
-  background-image: url(http://i.imgur.com/FHjA9q3.jpg)
   background-repeat: no-repeat
   background-size: cover
   display: flex
   flex-direction: column
 
-.ui.orange.inverted.header
-  flex: 0 0 auto
-  font-size: 4rem
-  padding-top: 1em
-  padding-left: 1.5em
+  >div:first-child
+    background-repeat: no-repeat
+    background-size: 100% auto
+    height: 16vh
+    width: 25.2vh
+    margin: 2em 0 0 4rem
 
 .ui.brown.inverted.header
   font-size: 40px
 
-#intro
+.introduction
   color: #000000
   font-family: Arial Verdana
   font-size: 1.5rem
@@ -23,6 +23,16 @@ body
   line-height: 2rem
   padding: 0 3rem 0 3rem
   text-align: left
+
+.introduction1
+  color: #000000
+  font-family: Arial Verdana
+  font-size: 1.5rem
+  font-weight: bold
+  letter-spacing: .2rem
+  line-height: 2rem
+  padding: 0 3rem 0 3rem
+  text-align: center
 
 #container
   display: flex
@@ -35,7 +45,7 @@ body
     flex: 0 0 50%
     flex-direction: column
 
-    #about_us,#getapp
+    .description
       flex: 1 1 auto
 
   > img
