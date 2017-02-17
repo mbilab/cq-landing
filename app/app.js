@@ -13,5 +13,6 @@ $(document).ready(function() {
   })
 
   $('body').css('background-image','url('+require('./res/cq-res/home/background.png')+')')
-  $('body > div:first-child').css('background-image','url('+require('./res/cq-res/main/logo-vertical.png')+')')
+  $('#title').css('background-image','url('+require('./res/cq-res/main/logo-vertical.png')+')')
+  $('#iphone').css('background-image','url('+require('./res/cq-res/home/iphone.png')+')')
 })

@@ -4,54 +4,56 @@ body
   display: flex
   flex-direction: column
 
-  >div:first-child
+  #title
     background-repeat: no-repeat
     background-size: 100% auto
     height: 16vh
     width: 25.2vh
     margin: 2em 0 0 4rem
 
-.ui.brown.inverted.header
-  font-size: 40px
-
-.introduction
-  color: #000000
-  font-family: Arial Verdana
-  font-size: 1.5rem
-  font-weight: bold
-  letter-spacing: .2rem
-  line-height: 2rem
-  padding: 0 3rem 0 3rem
-  text-align: left
-
-.introduction1
-  color: #000000
-  font-family: Arial Verdana
-  font-size: 1.5rem
-  font-weight: bold
-  letter-spacing: .2rem
-  line-height: 2rem
-  padding: 0 3rem 0 3rem
-  text-align: center
-
-#container
-  display: flex
-  flex: 1 1 auto
-  text-align: center
-  padding-top: 2em
-
-  > div
+  #container
     display: flex
-    flex: 0 0 50%
-    flex-direction: column
+    flex: 1 1 auto
+    text-align: center
 
-    .description
-      flex: 1 1 auto
+    #iphone
+      background-repeat: no-repeat
+      background-size: 100% auto
+      height: 70vh
+      margin: 2% 2% 0 10%
+      width: 54.6vh
 
-  > img
-    margin-left: 10%
-    max-height: 600px
+    .content
+      display: flex
+      flex: 0 0 50%
+      flex-direction: column
 
-#getapp > img
-  height: 60px
-  width: 180px
+      .description
+        flex: 1 1 auto
+
+        > img
+          height: 60px
+          width: 180px
+
+        .ui.brown.inverted.header
+          font-size: 40px
+
+        .introduction
+          color: #000000
+          font-family: Arial Verdana
+          font-size: 1.5rem
+          font-weight: bold
+          letter-spacing: .2rem
+          line-height: 2rem
+          padding: 0 3rem 0 3rem
+          text-align: left
+
+        .introduction1
+          color: #000000
+          font-family: Arial Verdana
+          font-size: 1.5rem
+          font-weight: bold
+          letter-spacing: .2rem
+          line-height: 2rem
+          padding: 0 3rem 0 3rem
+          text-align: center
