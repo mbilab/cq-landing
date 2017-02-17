@@ -11,8 +11,15 @@ $(document).ready(function() {
   $('#getapp > img:nth-child(2)').click(function() {
     window.open('https://www.youtube.com/watch?v=4_mTpRvTuSU')
   })
+  $('#register-btn').click(function() {
+    window.open('https://www.youtube.com/watch?v=T4SimnaiktU')
+  })
 
   $('body').css('background-image','url('+require('./res/cq-res/home/background.png')+')')
   $('#title').css('background-image','url('+require('./res/cq-res/main/logo-vertical.png')+')')
   $('#iphone').css('background-image','url('+require('./res/cq-res/home/iphone.png')+')')
+  $('#register-btn').css('background-image','url('+require('./res/cq-res/home/register-button.png')+')')
+  $('#app').css('background-image','url('+require('./res/cq-res/home/app.png')+')')
+  $('#google').css('background-image','url('+require('./res/cq-res/home/google.png')+')')
+
 })

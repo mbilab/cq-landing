@@ -4,56 +4,81 @@ body
   display: flex
   flex-direction: column
 
-  #title
+#title
+  background-repeat: no-repeat
+  background-size: 100% auto
+  height: 16vh
+  width: 25.2vh
+  margin: 2em 0 0 4rem
+
+#container
+  display: flex
+  flex: 1 1 auto
+  text-align: center
+
+  #iphone
     background-repeat: no-repeat
     background-size: 100% auto
-    height: 16vh
-    width: 25.2vh
-    margin: 2em 0 0 4rem
+    height: 70vh
+    margin: 2% 2% 0 10%
+    width: 54.6vh
 
-  #container
+  .content
     display: flex
-    flex: 1 1 auto
+    flex: 0 0 50%
+    flex-direction: column
+    height: 70vh
+    width: 60vh
+
+    .description
+      flex: 1 1 auto
+
+      .getapp
+        float: left
+        height: 20vh
+        padding-left: 2%
+        width: 50vh
+
+      #app
+        background-repeat: no-repeat
+        background-size: 100% auto
+        height: 7.5vh
+        width: 25.26vh
+
+      #google
+        background-repeat: no-repeat
+        background-size: 100% auto
+        height: 7.5vh
+        width: 20vh
+
+    .ui.brown.inverted.header
+      font-size: 40px
+
+  .introduction
+    color: #000
+    font-family: Arial Verdana
+    font-size: 1.5rem
+    font-weight: bold
+    letter-spacing: .2rem
+    line-height: 2rem
+    padding: 0 3rem 0 3rem
+
+  .introduction:first-child
+    text-align: left
+
+  .introduction:nth-child(2)
     text-align: center
 
-    #iphone
-      background-repeat: no-repeat
-      background-size: 100% auto
-      height: 70vh
-      margin: 2% 2% 0 10%
-      width: 54.6vh
+  #register-btn
+    background-repeat: no-repeat
+    background-size: 100% auto
+    height: 5vh
+    margin: 2% auto 0
+    transition: all .1s
+    width: 17.2vh
 
-    .content
-      display: flex
-      flex: 0 0 50%
-      flex-direction: column
-
-      .description
-        flex: 1 1 auto
-
-        > img
-          height: 60px
-          width: 180px
-
-        .ui.brown.inverted.header
-          font-size: 40px
-
-        .introduction
-          color: #000000
-          font-family: Arial Verdana
-          font-size: 1.5rem
-          font-weight: bold
-          letter-spacing: .2rem
-          line-height: 2rem
-          padding: 0 3rem 0 3rem
-          text-align: left
-
-        .introduction1
-          color: #000000
-          font-family: Arial Verdana
-          font-size: 1.5rem
-          font-weight: bold
-          letter-spacing: .2rem
-          line-height: 2rem
-          padding: 0 3rem 0 3rem
-          text-align: center
+  #register-btn:hover
+    height: 6vh
+    width: 20.64vh
+    margin-top: calc(2% - .5vh)
+    margin-bottom: -.5vh
