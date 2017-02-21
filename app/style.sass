@@ -37,6 +37,30 @@ body
     height: 70vh
     width: 60vh
 
+    #content-top-bg
+      position: absolute
+      background-repeat: no-repeat
+      background-size: 100% auto
+      background-position: center
+      height: 3.92vh
+      width: 60vh
+      z-index: 0
+
+    #content-mid-bg
+      background-repeat: repeat-y
+      background-size: 100% auto
+      background-position: center
+      height: 80vh
+      width: 60vh
+
+    #content-bottom-bg
+      position: absolute
+      background-repeat: no-repeat
+      background-size: 100% auto
+      background-position: center
+      height: 3.92vh
+      width: 60vh
+      z-index: 0
     .description
       flex: 1 1 auto
 
@@ -76,7 +100,7 @@ body
   .introduction:nth-child(2)
     text-align: center
 
-  #register-btn
+  //#register-btn
     background-repeat: no-repeat
     background-size: 100% auto
     height: 5vh
@@ -84,5 +108,22 @@ body
     transition: all .1s
     width: 17.2vh
 
-  #register-btn:hover
+  //#register-btn:hover
+    transform: scale(1.2,1.2)
+
+  #new-btn
+    background-color: #FF5151
+    border-radius: 10px
+    box-shadow: 0 6px #999;
+    color: #FFF
+    font-size: 1.5em
+    font-family: arial
+    font-weight: 900
+    text-align: center
+    height: 5vh
+    margin: 2% auto 0
+    padding: .5rem
+    width: 17.2vh
+
+  #new-btn:hover
     transform: scale(1.2,1.2)
