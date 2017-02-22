@@ -11,7 +11,7 @@ $(document).ready(function() {
   $('#getapp > img:nth-child(2)').click(function() {
     window.open('https://www.youtube.com/watch?v=4_mTpRvTuSU')
   })
-  $('#register-btn').click(function() {
+  $('#new-btn').click(function() {
     window.open('https://www.youtube.com/watch?v=T4SimnaiktU')
   })
 
@@ -25,5 +25,4 @@ $(document).ready(function() {
   $('#content-top-bg').css('background-image','url('+require('./res/cq-res/public_use/content-top-bg.png')+')')
   $('#content-mid-bg').css('background-image','url('+require('./res/cq-res/public_use/content-bg.png')+')')
   $('#content-bottom-bg').css('background-image','url('+require('./res/cq-res/public_use/content-bottom-bg.png')+')')
-
 })

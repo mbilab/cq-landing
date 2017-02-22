@@ -34,35 +34,36 @@ body
     display: flex
     flex: 0 0 50%
     flex-direction: column
-    height: 70vh
+    height: 75vh
     width: 60vh
 
     #content-top-bg
-      position: absolute
       background-repeat: no-repeat
       background-size: 100% auto
       background-position: center
       height: 3.92vh
-      width: 60vh
-      z-index: 0
+      margin-top: -8em
+      width: 90vh
 
     #content-mid-bg
+      display: flex
       background-repeat: repeat-y
       background-size: 100% auto
       background-position: center
+      flex-direction: column
       height: 80vh
-      width: 60vh
+      width: 90vh
 
     #content-bottom-bg
-      position: absolute
       background-repeat: no-repeat
       background-size: 100% auto
       background-position: center
-      height: 3.92vh
-      width: 60vh
-      z-index: 0
+      height: 7.88vh
+      width: 90vh
+
     .description
       flex: 1 1 auto
+      //margin-top:   
 
       .getapp
         display: inline-block
@@ -83,6 +84,7 @@ body
         width: 20vh
 
     .ui.red.inverted.header
+      margin-top: .5em
       font-size: 35px
 
   .introduction
@@ -92,24 +94,13 @@ body
     font-weight:  bolder
     letter-spacing: .2rem
     line-height: 2rem
-    padding: 0 3rem 0 3rem
+    padding: 0 6rem 0 6rem
 
   .introduction:first-child
     text-align: left
 
   .introduction:nth-child(2)
     text-align: center
-
-  //#register-btn
-    background-repeat: no-repeat
-    background-size: 100% auto
-    height: 5vh
-    margin: 2% auto 0
-    transition: all .1s
-    width: 17.2vh
-
-  //#register-btn:hover
-    transform: scale(1.2,1.2)
 
   #new-btn
     background-color: #FF5151
