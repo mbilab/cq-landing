@@ -1,3 +1,11 @@
+@font-face
+  font-family: cq-font;
+  src: url(./res/cq-res/font/GenJyuuGothic-Normal.ttf)
+
+@font-face
+  font-family: cq-font-bold
+  src: url(./res/cq-res/font/GenJyuuGothic-Bold.ttf)
+
 body
   background-repeat: no-repeat
   background-size: cover
@@ -63,7 +71,6 @@ body
 
     .description
       flex: 1 1 auto
-      //margin-top:   
 
       .getapp
         display: inline-block
@@ -86,10 +93,11 @@ body
     .ui.red.inverted.header
       margin-top: .5em
       font-size: 35px
+      font-family: cq-font-bold
 
   .introduction
     color: #000
-    font-family: arial
+    font-family: cq-font
     font-size: 1.5rem
     font-weight:  bolder
     letter-spacing: .2rem
