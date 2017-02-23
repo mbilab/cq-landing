@@ -7,6 +7,7 @@
   src: url(./res/cq-res/font/GenJyuuGothic-Bold.ttf)
 
 body
+  background-image: url('./res/cq-res/home/background.png')
   background-repeat: no-repeat
   background-size: cover
   display: flex
@@ -20,6 +21,7 @@ body
     z-index: -1
 
 #title
+  background-image: url('./res/cq-res/main/logo-vertical.png')
   background-repeat: no-repeat
   background-size: 100% auto
   height: 16vh
@@ -32,6 +34,7 @@ body
   text-align: center
 
   #iphone
+    background-image: url('./res/cq-res/home/iphone.png')
     background-repeat: no-repeat
     background-size: 100% auto
     height: 70vh
@@ -49,45 +52,45 @@ body
       background-position: center
       background-repeat: no-repeat
       background-size: 100% auto
+      width: 90vh
 
     #content-top-bg
+      background-image: url('./res/cq-res/public_use/content-top-bg.png')
       height: 3.92vh
       margin-top: -8em
-      width: 90vh
 
     #content-mid-bg
+      background-image: url('./res/cq-res/public_use/content-bg.png')
       background-repeat: repeat-y
       height: 80vh
-      width: 90vh
 
     #content-bottom-bg
+      background-image: url('./res/cq-res/public_use/content-bottom-bg.png')
       height: 7.88vh
-      width: 90vh
 
     .description
       flex: 1 1 auto
 
       .getapp
+        background-repeat: no-repeat
+        background-size: 100% auto
         display: inline-block
         height: 20vh
-        padding-left: 2%
         width: 50vh
 
       #app
-        background-repeat: no-repeat
-        background-size: 100% auto
+        background-image: url('./res/cq-res/home/app.png')
         height: 7.5vh
         width: 25.26vh
 
       #google
-        background-repeat: no-repeat
-        background-size: 100% auto
+        background-image: url('./res/cq-res/home/google.png')
         height: 7.5vh
         width: 20vh
 
     .ui.red.inverted.header
       margin-top: .5em
-      font-size: 35px
+      font-size: 2.5rem
       font-family: cq-font-bold
       text-shadow: .1rem .1rem  #FFE153
 
@@ -100,11 +103,8 @@ body
     line-height: 2rem
     padding: 0 6rem 0 6rem
 
-  .introduction:first-child
+  .description:first-child >.introduction
     text-align: left
-
-  .introduction:nth-child(2)
-    text-align: center
 
   #start-btn
     background-color: #FF5151
@@ -112,13 +112,12 @@ body
     box-shadow: 0 6px #999;
     color: #FFF
     font-size: 1.5em
-    font-family: arial
-    font-weight: 900
-    text-align: center
+    font-family: cq-font-bold
     height: 5vh
     margin: 2% auto 0
     padding: .5rem
+    transition: transform .1s
     width: 17.2vh
 
-  #new-btn:hover
+  #start-btn:hover
     transform: scale(1.2,1.2)
