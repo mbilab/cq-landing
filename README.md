@@ -1,1 +1,1 @@
-# new cq lannding page
+# cq landing page
