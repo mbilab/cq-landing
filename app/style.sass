@@ -52,7 +52,7 @@ body
       background-position: center
       background-repeat: no-repeat
       background-size: 100% auto
-      width: 90vh
+      width: 95vh
 
     #content-top-bg
       background-image: url('./res/cq-res/public_use/content-top-bg.png')
@@ -62,7 +62,7 @@ body
     #content-mid-bg
       background-image: url('./res/cq-res/public_use/content-bg.png')
       background-repeat: repeat-y
-      height: 80vh
+      height: 85vh
 
     #content-bottom-bg
       background-image: url('./res/cq-res/public_use/content-bottom-bg.png')
@@ -121,3 +121,23 @@ body
 
   #start-btn:hover
     transform: scale(1.2,1.2)
+
+  @media screen and (max-width: 768px)
+    #iphone
+      display: none
+
+    .content
+      display: flex
+      height: 80vh
+
+      #content-top-bg
+        margin-top: .5em
+
+      #content-mid-bg
+        height: 85vh
+
+      .content-bg
+        width: 75vh
+
+      #start-btn
+        line-height: 3.5vh
