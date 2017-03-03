@@ -4,10 +4,10 @@ const path = require('path')
 
 module.exports = {
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, 'dist'), //! path needed?
     host: '0.0.0.0',
     inline: true,
-    stats: {
+    stats: { //! all needed?
       assets: false,
       children: false,
       chunks: false,
@@ -21,28 +21,40 @@ module.exports = {
   },
   entry: './app/app.js',
   module: {
-    rules: [
-      { test: /\.css$/,
-        use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader' }),
+    rules: [ //! order
+      {
+        test: /\.css$/, //! needed?
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader',
+        }),
       },
-      { test: /\.sass$/,
-        use: ExtractTextPlugin.extract({ fallback: 'style-loader', use: ['css-loader', 'sass-loader'] }),
+      {
+        test: /\.sass$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader'],
+        }),
       },
-      { test: /\.(eot|ico|jpg|mp3|svg|ttf|woff2|woff|png?)($|\?)/, loader: 'file-loader' },
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader', query: { presets: ['es2015']} },
-      { test: /\.pug$/, use: ['html-loader', 'pug-html-loader'] },
+      { test: /\.(eot|ico|jpg|mp3|svg|ttf|woff2|woff|png?)($|\?)/, loader: 'file-loader' }, //! correct?
+      { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader', query: { presets: ['es2015']} }, //! correct?
+      {
+        test: /\.pug$/,
+        use: ['html-loader', 'pug-html-loader'],
+      },
     ],
   },
   output: {
     filename: 'app.js',
-    path: path.resolve('dist'),
+    path: path.resolve('dist'), //! path needed?
   },
   plugins: [
     new ExtractTextPlugin({
-      disable: false,
-      filename: 'style.css',
-      allChunks: true,
+      allChunks: true, //! needed?
+      disable: false, //! needed?
+      filename: 'style.css', //! app.sass & app.css
     }),
     new HtmlWebpackPlugin({ template: './app/index.pug' }),
   ],
 }
+//- vi:sw=2:ts=2:et
