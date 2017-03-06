@@ -13,27 +13,21 @@ body
   display: flex
   flex-direction: column
 
-  .shadow
-    position: absolute
-    background-color: rgba(255, 255, 255, 0.3)
-    height: 100%
-    width: 100%
-    z-index: -1
-
-#title
-  background-image: url('./res/cq-res/main/logo-vertical.png')
-  background-repeat: no-repeat
-  background-size: 100% auto
-  height: 16vh
-  width: 25.2vh
-  margin: 2em 0 0 5.5rem
-
 #container
   display: flex
   flex: 1 1 auto
   text-align: center
 
-  #iphone
+  #title
+    background-image: url('./res/cq-res/main/logo-vertical.png')
+    background-repeat: no-repeat
+    background-size: 100% auto
+    height: 16vh
+    width: 25.2vh
+    margin: 2em 0 0 5.5rem
+
+
+  #screenshot
     background-image: url('./res/cq-res/home/iphone.png')
     background-repeat: no-repeat
     background-size: 100% auto
@@ -68,9 +62,6 @@ body
       background-image: url('./res/cq-res/public_use/content-bottom-bg.png')
       height: 7.88vh
 
-    .description
-      flex: 1 1 auto
-
       .getapp
         background-repeat: no-repeat
         background-size: 100% auto
@@ -104,7 +95,7 @@ body
     padding: 0 6rem 0 6rem
     text-align: justify
 
-  #start-btn
+  #btn
     background-color: #FF5151
     border-radius: 10px
     box-shadow: 0 6px #999;
@@ -117,7 +108,7 @@ body
     transition: transform .1s
     width: 17.2vh
 
-  #start-btn:hover
+  #btn:hover
     transform: scale(1.2,1.2)
 
   @media screen and (max-width: 768px)
@@ -137,5 +128,5 @@ body
       .content-bg
         width: 75vh
 
-      #start-btn
+      #btn
         line-height: 3.5vh

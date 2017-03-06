@@ -11,7 +11,7 @@ $(document).ready(function() {
   $('#google').click(function() {
     window.open('https://www.youtube.com/watch?v=YgSx03vOU1I')
   })
-  $('#tartew-btn').click(function() {
+  $('#btn').click(function() {
     window.open('https://www.youtube.com/watch?v=T4SimnaiktU')
   })
 })
