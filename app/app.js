@@ -1,5 +1,5 @@
 import 'semantic-ui/dist/semantic.css'
-import './style.sass'
+import './app.sass'
 
 window.$ = window.jQuery = require('jquery')
 require('semantic-ui/dist/semantic.js')
