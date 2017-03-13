@@ -105,22 +105,31 @@ body
   #start-btn:hover
     transform: scale(1.2,1.2)
 
-  @media screen and (max-width: 768px)
-    #screenshot
-      display: none
+@media screen and (max-width: 768px)
+  #title
+    background-image: url('./res/cq-res/home/logo.png')
+    background-repeat: no-repeat
+    background-size: 100% auto
+    height: 4rem
+    width: 20.75rem
+    margin: 1rem 50% 6rem
 
-    .content
+    #container
       display: flex
       height: 80rem
+      margin: 1rem 50%
 
-      #content-top-bg
-        margin-top: .5em
+      #screenshot
+        display: none
 
-      #content-mid-bg
-        height: 47.22rem
+        #content-top-bg
+          margin-top: .5em
 
-      .content-bg
-        width: 41.67rem
+        #content-mid-bg
+          height: 47.22rem
 
-      #start-btn
-        line-height: 3.5rem
+        .content-bg
+          width: 41.67rem
+
+        #start-btn
+          line-height: 3.5rem
