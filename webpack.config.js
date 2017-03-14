@@ -6,7 +6,10 @@ module.exports = {
     host: '0.0.0.0',
     stats: 'minimal',
   },
-  entry: ['./app/app.js', './app/build.js'],
+  entry: {
+    app: './app/app.js',
+    build: './app/build.js'
+  },
   module: {
     rules: [
       { test: /\.css$/, use: ExtractTextPlugin.extract('css-loader') },
@@ -26,18 +29,16 @@ module.exports = {
     path: __dirname+'/dist',
   },
   plugins: [
-    new ExtractTextPlugin({ filename: '[name].css'}),
+    new ExtractTextPlugin('[name].css'),
     new HtmlWebpackPlugin({
       template: './app/index.pug',
-      injection: false,
+      inject: false,
       filename: 'index.html',
-      chunks: 'app',
     }),
     new HtmlWebpackPlugin({
       template: './app/build.pug',
-      injection: false,
+      inject: false,
       filename: 'build.html',
-      chunks: 'build',
     }),
   ],
 }
