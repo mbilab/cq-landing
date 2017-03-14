@@ -6,7 +6,7 @@ module.exports = {
     host: '0.0.0.0',
     stats: 'minimal',
   },
-  entry: './app/app.js',
+  entry: ['./app/app.js', './app/build.js'],
   module: {
     rules: [
       { test: /\.css$/, use: ExtractTextPlugin.extract('css-loader') },
@@ -22,12 +22,23 @@ module.exports = {
     ],
   },
   output: {
-    filename: 'app.js',
+    filename: '[name].js',
     path: __dirname+'/dist',
   },
   plugins: [
-    new ExtractTextPlugin({ filename: 'app.css' }),
-    new HtmlWebpackPlugin({ template: './app/index.pug' }),
+    new ExtractTextPlugin({ filename: '[name].css'}),
+    new HtmlWebpackPlugin({
+      template: './app/index.pug',
+      injection: false,
+      filename: 'index.html',
+      chunks: 'app',
+    }),
+    new HtmlWebpackPlugin({
+      template: './app/build.pug',
+      injection: false,
+      filename: 'build.html',
+      chunks: 'build',
+    }),
   ],
 }
 

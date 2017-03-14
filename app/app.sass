@@ -10,8 +10,6 @@ body
   background-image: url('./res/cq-res/home/background.png')
   background-repeat: no-repeat
   background-size: cover
-  display: flex
-  flex-direction: column
 
 #title
   background-image: url('./res/cq-res/main/logo-vertical.png')
@@ -23,15 +21,15 @@ body
 
 #container
   display: flex
-  flex: 1 1 auto
   text-align: center
+  width: 100%
 
   #screenshot
     background-image: url('./res/cq-res/home/iphone.png')
     background-repeat: no-repeat
     background-size: 100% auto
     height: 38.89rem
-    margin: 2% 2% 0 5%
+    margin: 0 .5rem 0 4rem
     width: 30.33rem
 
   .content
@@ -108,28 +106,9 @@ body
 @media screen and (max-width: 768px)
   #title
     background-image: url('./res/cq-res/home/logo.png')
-    background-repeat: no-repeat
-    background-size: 100% auto
-    height: 4rem
-    width: 20.75rem
-    margin: 1rem 50% 6rem
+    height: 4.8rem
+    width: 24.9rem
+    background-position: center
 
-    #container
-      display: flex
-      height: 80rem
-      margin: 1rem 50%
-
-      #screenshot
-        display: none
-
-        #content-top-bg
-          margin-top: .5em
-
-        #content-mid-bg
-          height: 47.22rem
-
-        .content-bg
-          width: 41.67rem
-
-        #start-btn
-          line-height: 3.5rem
+  #screenshot
+    display: none
