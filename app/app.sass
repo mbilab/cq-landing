@@ -6,28 +6,32 @@
   font-family: cq-font-bold
   src: url(./res/cq-res/font/GenJyuuGothic-Bold.ttf)
 
-body
-  background-image: url('./res/cq-res/home/background.png')
-  background-repeat: no-repeat
-  background-size: cover
-
-#title
-  background-image: url('./res/cq-res/main/logo-vertical.png')
+@mixin bg($bg-url)
+  background-image: url($bg-url)
   background-repeat: no-repeat
   background-size: 100% auto
-  height: 8.88rem
-  width: 14rem
-  margin: 2rem 0 0 5.5rem
+
+body
+  +bg('./res/cq-res/home/background.png')
+  background-size: cover
+  overflow: hidden
+
 
 #container
-  display: flex
   text-align: center
   width: 100%
 
+  #title
+    +bg('./res/cq-res/main/logo-vertical.png')
+    height: 8.88rem
+    width: 14rem
+    margin: 2rem 0 0 5.5rem
+
+  .wrapper
+    display: flex
+
   #screenshot
-    background-image: url('./res/cq-res/home/iphone.png')
-    background-repeat: no-repeat
-    background-size: 100% auto
+    +bg('./res/cq-res/home/iphone.png')
     height: 38.89rem
     margin: 0 .5rem 0 4rem
     width: 30.33rem
@@ -39,7 +43,7 @@ body
     height: 41.66rem
     width: 33.33rem
 
-    .content-bg
+    >div
       background-position: center
       background-repeat: no-repeat
       background-size: 100% 100%
