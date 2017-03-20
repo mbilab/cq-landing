@@ -8,12 +8,12 @@ $(document).ready(function() {
   const w = 1280
   const h = 720
   const unit = 14
-  $(window).resize(function(){
-    let areaRatio = ($(window).width()) * ($(window).height()) / (w * h)
-    console.log(`${w},${h},${areaRatio}`)
-    console.log(unit * areaRatio)
-    $('body').css('font-size', `${unit * areaRatio}px`)
-  })
+  // $(window).resize(function(){
+  //   let areaRatio = ($(window).width()) * ($(window).height()) / (w * h)
+  //   console.log(`${w},${h},${areaRatio}`)
+  //   console.log(unit * areaRatio)
+  //   $('body').css('font-size', `${unit * areaRatio}px`)
+  // })
   $('.android.icon').click(function() {
     window.open('https://play.google.com/store/apps/details?id=com.mbilab.cq')
   })

@@ -18,46 +18,62 @@ body
 
 
 #container
+  display: flex
+  flex-direction: column
+  height: 100%
+  padding-top: 2rem
   text-align: center
   width: 100%
 
   #title
     +bg('./res/cq-res/main/logo-vertical.png')
-    height: 8.88rem
-    width: 14rem
-    margin: 2rem 0 0 5.5rem
+    height: 8.88vw
+    width: 14vw
+    margin-left: 10vw
 
   .wrapper
     display: flex
+    flex: 1
 
   #screenshot
     +bg('./res/cq-res/home/iphone.png')
-    height: 38.89rem
-    margin: 0 .5rem 0 4rem
-    width: 30.33rem
+    height: 32vw
+    margin-left: 8vw
+    width: 25vw
 
   .content
     display: flex
-    flex: 0 0 50%
+    flex: 1 1 auto
     flex-direction: column
-    height: 41.66rem
-    width: 33.33rem
+    margin-left: 5vw
+    margin-top: -5%
 
     >div
       background-position: center
       background-repeat: no-repeat
       background-size: 100% 100%
-      width: 52.78rem
+      // width: 52.78rem
+      width: 44vw
 
     #content-top-bg
       background-image: url('./res/cq-res/public_use/content-top-bg.png')
-      height: 3.44rem
-      margin-top: -4.44em
+      // height: 3.44rem
+      height: 2.86vw
 
     #content-mid-bg
+      align-items: center
+      justify-content: center
       background-image: url('./res/cq-res/public_use/content-bg.png')
       background-repeat: repeat-y
-      height: 47.22rem
+      display: flex
+      flex-direction: column
+      // height: 47.22rem
+      height: 35vw
+      overflow-y: auto
+      padding: 1rem 6rem
+
+      .buttons
+        margin: 1em 0
 
       .ui.icon.button
         height: 6rem
@@ -71,7 +87,8 @@ body
 
     #content-bottom-bg
       background-image: url('./res/cq-res/public_use/content-bottom-bg.png')
-      height: 4.38rem
+      height: 3.65vw
+      // height: 4.38rem
 
     .ui.header
       margin-top: .5em
@@ -86,7 +103,6 @@ body
     font-weight:  bolder
     letter-spacing: .2rem
     line-height: 2.5rem
-    padding: 0 6rem 0 6rem
     text-align: justify
 
   #start-btn
@@ -108,11 +124,41 @@ body
     transform: scale(1.2,1.2)
 
 @media screen and (max-width: 768px)
-  #title
-    background-image: url('./res/cq-res/home/logo.png')
-    height: 4.8rem
-    width: 24.9rem
-    background-position: center
+  #container
+    padding-top: 4em
 
-  #screenshot
-    display: none
+    #title
+      +bg('./res/cq-res/home/logo.png')
+      height: 13.49vw
+      margin: 0 auto
+      width: 70vw
+    // height: 4.8rem
+    // width: 24.9rem
+
+    #screenshot
+      display: none
+
+    .wrapper
+      padding-top: 2em
+
+      .content
+        margin: 0 2vw
+
+        >div
+          width: 96vw
+
+        #content-top-bg
+          height: 6.24vw
+
+        #content-mid-bg
+          height: 80%
+          padding: 0 2.5rem
+
+          .section
+            font-size: 1rem
+            letter-spacing: 0
+            line-height: 1.8rem
+
+        #content-bottom-bg
+          height: 7.96vw
+
