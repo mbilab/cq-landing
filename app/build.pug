@@ -7,10 +7,18 @@ html
     link(rel='stylesheet' type='text/css' href='build.css')
   body
     #container
-      #homework.title
-      #report.title
-      #study.title
-      #synthetic.title
-
-    #submit-btn submit
+      .header
+        #homework
+        #report
+        #study
+        #synthetic
+      .apply-process
+      .content
+        #icon
+        .ui.big.icon.input
+          input(type='text' placeholder='add a mission')
+        .ui.big.icon.input
+          input(type='text' placeholder='exp')
+        .ui.big.heart.rating(data-rating='1' data-max-rating='5')
+      #submit-btn submit
     script(src='build.js')
