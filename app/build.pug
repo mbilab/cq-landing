@@ -16,9 +16,12 @@ html
       .content
         #icon
         .ui.big.icon.input
-          input(type='text' placeholder='add a mission')
+          input(type='text' placeholder='mission')
+        .ui.big.icon.input
+          input(type='text' placeholder='mission content')
         .ui.big.icon.input
           input(type='text' placeholder='exp')
-        .ui.big.heart.rating(data-rating='1' data-max-rating='5')
+          i|難度
+        .ui.massive.heart.rating(data-rating='1' data-max-rating='5')
       #submit-btn submit
     script(src='build.js')
