@@ -48,15 +48,20 @@
 .ui.big.icon.input
   flex: 1 1 auto
 
-  > i
+  > p
+    font-size: 2rem
     font-family: cq-font-bold
+
+i
+  font-size: 2rem
+  font-family: cq-font-bold
 
 .-btn
   border-radius: 1.5rem
   color: #FFF
   font-size: 1.5rem
   height: 3.2rem
-  width: 6.7rem
+  width: 7rem
   text-align: center
   line-height: 3rem
   font-family: cq-font-bold
@@ -69,7 +74,7 @@
 #submit-btn
   background-color: #d25c5a
   border: 0.25rem solid #a04341
-  margin-left: 2rem
+  margin: auto
 
 #important
   color: firebrick
@@ -78,8 +83,17 @@
   margin: 1rem auto
   width: 50%
 
+.big
+  height: 5vw
+  width: 17vw
+
 .mini
   height: 4rem
+  width: 15rem
 
 .ui.mini.icon.input
   margin-left: 3rem
+
+@media screen and (max-width: 500px)
+  .inline
+    display: block

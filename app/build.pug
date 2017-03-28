@@ -14,30 +14,34 @@ html
         #synthetic
       .apply-process
       .content
+        #important
+          |*必填!!
+          .ui.mini.icon.input
+            input(type='text' placeholder='gmail')
         .mission
           .avatar
-          .ui.big.icon.input
-            input(type='text' placeholder='mission')
-          .ui.big.icon.input
-            input(type='text' placeholder='mission content')
-          .ui.big.icon.input
-            input(type='text' placeholder='exp')
-            i|難度
-          .ui.massive.heart.rating(data-rating='1' data-max-rating='5')
+          .inline
+            .ui.big.icon.input
+              input(type='text' placeholder='mission')
+            .ui.big.icon.input
+              input(type='text' placeholder='mission content')
+          .inline
+            .ui.big.icon.input
+              input(type='text' placeholder='exp')
+              p| Difficulty
+              .ui.massive.heart.rating(data-rating='1' data-max-rating='5')
         .mission
           .avatar
-          .ui.big.icon.input
-            input(type='text' placeholder='mission')
-          .ui.big.icon.input
-            input(type='text' placeholder='mission content')
-          .ui.big.icon.input
-            input(type='text' placeholder='exp')
+          .inline
+            .ui.big.icon.input
+              input(type='text' placeholder='mission')
+            .ui.big.icon.input
+              input(type='text' placeholder='mission content')
+          .inline
+            .ui.big.icon.input
+              input(type='text' placeholder='exp')
             i|難度
-          .ui.massive.heart.rating(data-rating='1' data-max-rating='5')
+            .ui.massive.heart.rating(data-rating='1' data-max-rating='5')
         #add-btn.-btn Add
-      #important
-        |*必填!!
-        .ui.mini.icon.input
-          input(type='text' placeholder='gmail')
-          #submit-btn.-btn Submit
+        #submit-btn.-btn Submit
     script(src='build.js')
