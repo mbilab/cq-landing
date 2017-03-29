@@ -9,4 +9,7 @@ $(document).ready(function() {
     initialRating: 1,
     maxRating: 5,
   })
+  $('#submit-btn').click(function(){
+    console.log('hihihi')
+  })
 })
