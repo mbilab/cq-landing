@@ -5,9 +5,9 @@ window.$ = window.jQuery = require('jquery')
 require('semantic-ui/dist/semantic.js')
 
 $(document).ready(function() {
-  const w = 1280
-  const h = 720
-  const unit = 14
+  //const w = 1280
+  //const h = 720
+  //const unit = 14
   // $(window).resize(function(){
   //   let areaRatio = ($(window).width()) * ($(window).height()) / (w * h)
   //   console.log(`${w},${h},${areaRatio}`)

@@ -10,6 +10,14 @@ $(document).ready(function() {
     maxRating: 5,
   })
   $('#submit-btn').click(function(){
-    console.log('hihihi')
+    let a = {
+      Gmail: $('.mail').val(),
+      Mission_content: $('.Mission_content').val(),
+      Mission_name: $('.Mission_name').val(),
+    }
+    console.log(a)
+  })
+  $('#add-btn').click(function(){
+    $('.mission').clone().appendTo('.content')
   })
 })
