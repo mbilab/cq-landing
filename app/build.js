@@ -10,14 +10,13 @@ $(document).ready(function() {
     maxRating: 5,
   })
   $('#submit-btn').click(function(){
-    let a = {
-      Gmail: $('.mail').val(),
-      Mission_content: $('.Mission_content').val(),
-      Mission_name: $('.Mission_name').val(),
-    }
-    console.log(a)
+    //let mission = {
+    //  Gmail: $('.mail').val(),
+    //  Mission_content: $('.Mission_content').val(),
+    //  Mission_name: $('.Mission_name').val(),
+    //}
   })
   $('#add-btn').click(function(){
-    $('.mission').clone().appendTo('.content')
+    $('#mission-list').append($('.mission').first().clone())
   })
 })
