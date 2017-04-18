@@ -4,19 +4,27 @@ import './build.sass'
 window.$ = window.jQuery = require('jquery')
 require('semantic-ui/dist/semantic.js')
 
-$(document).ready(function() {
+$(document).ready(function(){
   $('.ui.massive.heart.rating').rating({
     initialRating: 1,
     maxRating: 5,
   })
-  $('#submit-btn').click(function(){
-    //let mission = {
-    //  Gmail: $('.mail').val(),
-    //  Mission_content: $('.Mission_content').val(),
-    //  Mission_name: $('.Mission_name').val(),
-    //}
-  })
+
   $('#add-btn').click(function(){
     $('#mission-list').append($('.mission').first().clone())
+  })
+
+  $('#submit-btn').click(function(){
+    let mission = []
+    $('.mission').each(function( index , el ){
+      let m = {
+        Mission_rating: $(el).find('.ui.rating').rating('get rating'),
+        Mission_name: $(el).find('.mission_name').val(),
+        Mission_content: $(el).find('.mission_content').val(),
+      }
+      mission.push(m)
+    })
+    const data = { gmail: $('.mail').val(), mission }
+    console.log( data )
   })
 })
