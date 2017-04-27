@@ -14,16 +14,21 @@ $(document).ready(function(){
     $('#mission-list').append($('.mission').first().clone())
   })
 
+  $('.avatar').click(function(){
+    $('.avatar').modal('show')
+  })
+
   $('#submit-btn').click(function(){
     let mission = []
     $('.mission').each(function( index , el ){
       let m = {
         Mission_rating: $(el).find('.ui.rating').rating('get rating'),
-        Mission_name: $(el).find('.mission_name').val(),
-        Mission_content: $(el).find('.mission_content').val(),
+        Mission_name: $(el).find('.Mission_name').val(),
+        Mission_content: $(el).find('.Mission_content').val(),
       }
       mission.push(m)
     })
+
     const data = { gmail: $('.mail').val(), mission }
     console.log( data )
   })
