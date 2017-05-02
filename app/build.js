@@ -15,7 +15,7 @@ $(document).ready(function(){
   })
 
   $('.avatar').click(function(){
-    $('.avatar').modal('show')
+    $('.ui.modal').modal('show')
   })
 
   $('#submit-btn').click(function(){
