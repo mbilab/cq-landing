@@ -18,6 +18,11 @@ $(document).ready(function(){
     $('.ui.modal').modal('show')
   })
 
+  $('.modal img').click(function(event) {
+    $('.avatar').css('background-image',`url('${$(event.currentTarget).attr('src')}')`)
+      $('.ui.modal').modal('hide');
+  })
+
   $('#submit-btn').click(function(){
     let mission = []
     $('.mission').each(function( index , el ){
