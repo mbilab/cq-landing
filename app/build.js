@@ -27,9 +27,10 @@ $(document).ready(function(){
     let mission = []
     $('.mission').each(function( index , el ){
       let m = {
+        avatar: $(el).find('.avatar').css('background-image').match(/[a-z0-9]+\.svg/),
         Mission_rating: $(el).find('.ui.rating').rating('get rating'),
-        Mission_name: $(el).find('.Mission_name').val(),
-        Mission_content: $(el).find('.Mission_content').val(),
+        Mission_name: $(el).find('.mission_name').val(),
+        Mission_content: $(el).find('.mission_content').val(),
       }
       mission.push(m)
     })
