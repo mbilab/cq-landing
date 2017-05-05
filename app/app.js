@@ -21,6 +21,6 @@ $(document).ready(function() {
     window.open('https://www.youtube.com/watch?v=YgSx03vOU1I')
   })
   $('#start-btn').click(function() {
-    window.open('http://luffy.ee.ncku.edu.tw:8033/build.html')
+    window.open('https://www.youtube.com/watch?v=T4SimnaiktU')
   })
 })
