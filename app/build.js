@@ -10,8 +10,14 @@ $(document).ready(function(){
     maxRating: 5,
   })
 
+	let numOfClick = 0
   $('#add-btn').click(function(){
+		numOfClick = numOfClick + 1
+		if
+		(numOfClick < 5)
     $('#mission-list').append($('.mission.hide').clone().removeClass('hide'))
+		else
+		alert('您好，任務上限為五個～')
   })
 
   let p = null
