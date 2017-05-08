@@ -11,15 +11,17 @@ $(document).ready(function(){
   })
 
   $('#add-btn').click(function(){
-    $('#mission-list').append($('.mission').first().clone())
+    $('#mission-list').append($('.mission.hide').clone().removeClass('hide'))
   })
 
-  $('.avatar').click(function(){
-    $('.ui.modal').modal('show')
+  let p = null
+  $('#mission-list').on('click', '.avatar', function(event){
+    p = event.currentTarget
+    $('.ui.modal').modal('show');
   })
 
   $('.modal img').click(function(event) {
-    $('.avatar').css('background-image',`url('${$(event.currentTarget).attr('src')}')`)
+    $(p).css('background-image',`url('${$(event.currentTarget).attr('src')}')`)
       $('.ui.modal').modal('hide');
   })
 
