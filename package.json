@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --port 8033 --config webpack.config.js"
+    "start": "webpack-dev-server --port 8033 --progress --config webpack.config.js"
   },
   "license": "ISC",
   "dependencies": {
@@ -23,6 +23,8 @@
     "pug-html-loader": "^1.1.0",
     "sass-loader": "^5.0.0",
     "semantic-ui": "^2.2.7",
+    "socket.io": "^2.0.3",
+    "socket.io-client": "^2.0.3",
     "style-loader": "^0.13.1",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.3.0"

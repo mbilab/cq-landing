@@ -1,10 +1,14 @@
 import 'semantic-ui/dist/semantic.css'
 import './build.sass'
 
+const io = require('socket.io-client')
 window.$ = window.jQuery = require('jquery')
 require('semantic-ui/dist/semantic.js')
 
 $(document).ready(function(){
+
+  const socket = io('luffy.ee.ncku.edu.tw:8034')
+
   $('.ui.massive.heart.rating').rating({
     initialRating: 1,
     maxRating: 5,
@@ -50,8 +54,7 @@ $(document).ready(function(){
       }
       mission.push(m)
     })
-
     const data = { gmail: $('.mail').val(), mission }
-    console.log( data )
+    socket.emit('data' ,data)
   })
 })
