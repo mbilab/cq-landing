@@ -10,30 +10,38 @@ $(document).ready(function(){
     maxRating: 5,
   })
 
-	let numOfClick = 0
+  let numOfClick = 0
   $('#add-btn').click(function(){
-		numOfClick = numOfClick + 1
-		if
-		(numOfClick < 5)
-    $('#mission-list').append($('.mission.hide').clone().removeClass('hide'))
-		else
-		alert('您好，任務上限為五個～')
+    numOfClick = numOfClick + 1
+    if(numOfClick < 5)
+    {
+      let cloneMission = $('.mission.hide').clone().removeClass('hide')
+      $('#mission-list').append($(cloneMission))
+      $(cloneMission).find('.ui.rating').rating({
+        initialRating: 1,
+        maxRating: 5,
+      })
+    }
+    else
+    {
+      alert('您好，任務上限為五個～')
+    }
   })
 
   let p = null
   $('#mission-list').on('click', '.avatar', function(event){
     p = event.currentTarget
-    $('.ui.modal').modal('show');
+    $('.ui.modal').modal('show')
   })
 
   $('.modal img').click(function(event) {
     $(p).css('background-image',`url('${$(event.currentTarget).attr('src')}')`)
-      $('.ui.modal').modal('hide');
+    $('.ui.modal').modal('hide')
   })
 
   $('#submit-btn').click(function(){
     let mission = []
-    $('.mission').each(function( index , el ){
+    $('.mission').not('.hide').each(function( index , el ){
       let m = {
         avatar: $(el).find('.avatar').css('background-image').match(/[a-z0-9]+\.svg/),
         Mission_rating: $(el).find('.ui.rating').rating('get rating'),
