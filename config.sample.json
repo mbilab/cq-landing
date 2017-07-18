@@ -1,4 +1,6 @@
 {
   "user": "your_mongodb_username",
-  "password": "your_mongodb_passwd"
+  "password": "your_mongodb_passwd",
+  "host": "your_mongodb_host",
+  "database": "your_database_name"
 }

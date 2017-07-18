@@ -5,7 +5,10 @@ const config = require('./config.json')
 
 server.listen(8034)
 
-const mongo = mongoose.connect('mongodb://' + config.user + ':' + config.password + '@merry.ee.ncku.edu.tw/CQ_cusitom',{useMongoClient: true,})
+const mongo = mongoose.connect(
+  'mongodb://' + config.user + ':' + config.password + '@' + config.host + '/' + config.database,
+  { useMongoClient: true }
+)
 
 io.on('connection', function(socket) {
 
