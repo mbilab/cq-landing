@@ -68,5 +68,9 @@ $(document).ready(function(){
     })
     const data = { gmail: $('.mail').val(), mission }
     socket.emit('data' ,data)
+
+    socket.on('id', function(data){
+      console.log(data)
+    })
   })
 })
