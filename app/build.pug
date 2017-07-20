@@ -50,6 +50,7 @@ html
             .ui.tiny.image: img(src='./res/cq-res/skill/icon/talent.svg')
             .ui.tiny.image: img(src='./res/cq-res/skill/icon/time.svg')
             .ui.tiny.image: img(src='./res/cq-res/skill/icon/together.svg')
+
         #important
           .ui.divided.selection.list
           a.item *必填
@@ -69,7 +70,7 @@ html
               .ui.form.field
                 label|任務內容
                 textarea.mission_content
-                #remove-btn.-btn Remove
+              .remove-btn.-btn Remove
           .mission
             .wrapper
               .avatar
@@ -82,7 +83,8 @@ html
               .ui.form.field
                 a.ui.red.label 任務內容
                 textarea.mission_content
-                #remove-btn.-btn Remove
+              .remove-btn.-btn Remove
         #add-btn.-btn Add
         #submit-btn.-btn Submit
+    .ui.basic.modal#warning: h1.ui.icon.header.icon Warning!!至少一個任務r!!
     script(src='build.js')

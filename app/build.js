@@ -14,7 +14,7 @@ $(document).ready(function(){
     maxRating: 5,
   })
 
-  let numOfClick = 0
+  let numOfClick = 1
   $('#add-btn').click(function(){
     numOfClick = numOfClick + 1
     if(numOfClick < 5)
@@ -29,6 +29,18 @@ $(document).ready(function(){
     else
     {
       alert('您好，任務上限為五個～')
+    }
+  })
+
+  $('#mission-list').on('click', '.remove-btn', function(event){
+    if(numOfClick == 1)
+    {
+      $('#warning').modal('show')
+    }
+    else
+    {
+      numOfClick = numOfClick -1
+      $(event.currentTarget).parent().parent().remove()
     }
   })
 
