@@ -70,10 +70,8 @@ $(document).ready(function(){
     socket.emit('data' ,data)
 
   })
-  socket.on('finish', function(){
-    $('#finish').modal('show')
-  })
-  socket.on('fail', function(){
-    $('#fail').modal('show')
+  socket.on('message', function(data){
+    $('#message h1').text(data)
+    $('#message').modal('show')
   })
 })

@@ -36,12 +36,13 @@ db.on('open', function() {
 io.on('connection', function(socket) {
   socket.on('data', function(data) {
     if ( data.avatar == '' || data.courseName == '' || data.password == ''){
-      socket.emit('fail')
+      socket.emit('message', '不可有欄位為空!!')
       return
     }
     for(let i=0; i < data.mission.length; i++){
       if( data.mission[i].Mission_name == '' || data.mission[i].Mission_content == ''){
-        socket.emit('fail')
+        socket.emit('message', '不可有欄位為空!!')
+        return
       }
     }
     let id = ""
@@ -69,6 +70,6 @@ io.on('connection', function(socket) {
       password: data.password,
     }
     new hashModel(cipher).save()
-    socket.emit('finish')
+    socket.emit('message', '創建成功!!')
   })
 })
