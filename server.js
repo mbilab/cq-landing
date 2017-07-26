@@ -11,6 +11,11 @@ const quest = new Schema({
   prerequisite: String,
   star: Number,
 })
+const hash = new Schema({
+  courseName: String,
+  id: String,
+  password: String,
+})
 
 server.listen(8034)
 
@@ -38,9 +43,6 @@ io.on('connection', function(socket) {
     }
 
     socket.emit('get-id', id)
-    //data = { courseName: [...], password: [...], mission: [{}, {}, {}]}
-    //[id].quest
-    //new questModel({...}).save()
     const questModel = mongoose.model( id +'.quest', quest)
     for(let i=0; i < data.mission.length; i++){
       const row = {
@@ -52,6 +54,13 @@ io.on('connection', function(socket) {
       }
       new questModel(row).save()
     }
-    console.log(id)
+
+    const hashModel = mongoose.model('hash', hash)
+    const cipher = {
+      courseName: data.courseName,
+      id: id,
+      password: data.password,
+    }
+    new hashModel(cipher).save()
   })
 })
