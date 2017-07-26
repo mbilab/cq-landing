@@ -7,7 +7,7 @@ const Schema = mongoose.Schema
 const quest = new Schema({
   id: String,
   name: String,
-  type: String,
+  type: { type:String, default: 'main' },
   prerequisite: String,
   star: Number,
 })
@@ -35,20 +35,27 @@ db.on('open', function() {
 
 io.on('connection', function(socket) {
   socket.on('data', function(data) {
+    if ( data.avatar == '' || data.courseName == '' || data.password == ''){
+      socket.emit('fail')
+      return
+    }
+    for(let i=0; i < data.mission.length; i++){
+      if( data.mission[i].Mission_name == '' || data.mission[i].Mission_content == ''){
+        socket.emit('fail')
+      }
+    }
     let id = ""
-    const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+    const possible = "abcdefghijklmnopqrstuvwxyz0123456789"
 
     for (let i = 0; i < 5; i++) {
     	id += possible.charAt(Math.floor(Math.random() * possible.length))
     }
 
-    socket.emit('get-id', id)
     const questModel = mongoose.model( id +'.quest', quest)
     for(let i=0; i < data.mission.length; i++){
       const row = {
         id: id + '-' + i,
         name: data.mission[i].Mission_name,
-        type: 'main',
         prerequisite: data.mission[i].Mission_content,
         star: data.mission[i].Mission_rating,
       }
@@ -62,5 +69,6 @@ io.on('connection', function(socket) {
       password: data.password,
     }
     new hashModel(cipher).save()
+    socket.emit('finish')
   })
 })

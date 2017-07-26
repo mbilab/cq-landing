@@ -69,8 +69,11 @@ $(document).ready(function(){
     const data = { courseName: $('#courseName').val(), password: $('#password').val(), mission }
     socket.emit('data' ,data)
 
-    socket.on('get-id', function(data){
-      console.log(data)
-    })
+  })
+  socket.on('finish', function(){
+    $('#finish').modal('show')
+  })
+  socket.on('fail', function(){
+    $('#fail').modal('show')
   })
 })
