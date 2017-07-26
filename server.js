@@ -70,6 +70,6 @@ io.on('connection', function(socket) {
       password: data.password,
     }
     new hashModel(cipher).save()
-    socket.emit('message', '創建成功!!')
+    socket.emit('finish')
   })
 })

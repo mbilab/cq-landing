@@ -40,6 +40,11 @@ module.exports = {
       inject: false,
       filename: 'build.html',
     }),
+    new HtmlWebpackPlugin({
+      template: './app/success.pug',
+      inject: false,
+      filename: 'success.html',
+    }),
   ],
 }
 

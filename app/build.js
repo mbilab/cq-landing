@@ -74,4 +74,7 @@ $(document).ready(function(){
     $('#message h1').text(data)
     $('#message').modal('show')
   })
+  socket.on('finish', function(){
+    location.href = './success.html'
+  })
 })
