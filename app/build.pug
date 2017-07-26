@@ -52,11 +52,12 @@ html
             .ui.tiny.image: img(src='./res/cq-res/skill/icon/together.svg')
 
         #important
-          .ui.divided.selection.list
-          a.item *必填
-          div.ui.blue.large.horizontal.label Gmail !!
+          div.ui.blue.large.horizontal.label 課程名稱
           .ui.huge.form
-            input.mail(type='text' name='Gmail'  placeholder='Gmail')
+            input#courseName(type='text' name='Course name'  placeholder='課程名稱')
+          div.ui.blue.large.horizontal.label 管理者密碼
+          .ui.huge.form
+            input#password(type='password' name='Password'  placeholder='管理者密碼')
         #mission-list
           .mission.hide
             .wrapper
@@ -88,5 +89,6 @@ html
             .ui.divider
         #add-btn.-btn Add
         #submit-btn.-btn Submit
+    .ui.basic.modal#alert: h1.ui.icon.header.icon Warning!!最多五個任務!!
     .ui.basic.modal#warning: h1.ui.icon.header.icon Warning!!至少一個任務r!!
     script(src='build.js')

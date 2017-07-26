@@ -28,7 +28,7 @@ $(document).ready(function(){
     }
     else
     {
-      alert('您好，任務上限為五個～')
+      $('#alert').modal('show')
     }
   })
 
@@ -66,10 +66,10 @@ $(document).ready(function(){
       }
       mission.push(m)
     })
-    const data = { gmail: $('.mail').val(), mission }
+    const data = { courseName: $('#courseName').val(), password: $('#password').val(), mission }
     socket.emit('data' ,data)
 
-    socket.on('id', function(data){
+    socket.on('get-id', function(data){
       console.log(data)
     })
   })
