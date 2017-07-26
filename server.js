@@ -2,12 +2,15 @@ const server = require('http').createServer()
 const io = require('socket.io')(server)
 const mongoose = require('mongoose')
 const config = require('./config.json')
-const schema = require('./schema.js')
+const Schema = mongoose.Schema
 
-//const playerModel = mongoose.model('player', schema.player)
-//const playerQuestModel = mongoose.model('player.quest', schema.playerQuest)
-//const playerSkillModel = mongoose.model('player.skill', schema.playerSkill)
-//const playerTitleModel = mongoose.model('player.title', schema.playerTitle)
+const quest = new Schema({
+  id: String,
+  name: String,
+  type: String,
+  prerequisite: String,
+  star: Number,
+})
 
 server.listen(8034)
 
@@ -34,6 +37,21 @@ io.on('connection', function(socket) {
     	id += possible.charAt(Math.floor(Math.random() * possible.length))
     }
 
-    socket.emit('id', id)
+    socket.emit('get-id', id)
+    //data = { courseName: [...], password: [...], mission: [{}, {}, {}]}
+    //[id].quest
+    //new questModel({...}).save()
+    const questModel = mongoose.model( id +'.quest', quest)
+    for(let i=0; i < data.mission.length; i++){
+      const row = {
+        id: id + '-' + i,
+        name: data.mission[i].Mission_name,
+        type: 'main',
+        prerequisite: data.mission[i].Mission_content,
+        star: data.mission[i].Mission_rating,
+      }
+      new questModel(row).save()
+    }
+    console.log(id)
   })
 })
