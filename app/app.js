@@ -1,8 +1,7 @@
-import 'semantic-ui/dist/semantic.css'
-import './app.sass'
+import 'semantic-ui-offline/semantic.min.css'
 
 window.$ = window.jQuery = require('jquery')
-require('semantic-ui/dist/semantic.js')
+require('semantic-ui-offline/semantic.min')
 
 $(document).ready(function() {
   //const w = 1280
