@@ -19,7 +19,7 @@
     "sass": "^1.17.2"
   },
   "dependencies": {
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "semantic-ui-offline": "^2.3.2"
   }
 }
